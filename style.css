@@ -1,0 +1,256 @@
+/* animation */
+
+@keyframes red-panda {
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes mouth {
+    from {
+        transform: scale(0.4);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes eyebrows-l {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes eyebrows-r {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+
+/* setting */
+:root {
+    --main: #f8f8f8;
+    --sub: #9a9a9a;
+    --earline: #877360;
+    --nose: #3b3b3b;
+    --line: #383838;
+}
+
+/* reset */
+*,
+*:after, 
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b;
+    background-image: url('bg.png');
+}
+
+.red-panda {
+    position: relative;
+    top: 100px;
+    margin: 50px auto;
+    width: 400px;
+    height: 450px;
+    animation: red-panda 0.5s infinite alternate;
+}
+
+.face-main {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 370px;
+    z-index: 1;
+    border-radius: 50% 50% 40% 40%;
+    border: 10px solid var(--line);
+    background-color: var(--main);
+}
+
+.face-top {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+}
+
+.front-hair {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 350px;
+    height: 100px;
+    z-index: 2;
+    clip-path: circle(80% at 100% 40%);
+    border: 10px solid var(--line);
+    background-color: var(--main);
+}
+
+.face-top .ear.left {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    width: 230px;
+    height: 230px;
+    border-radius: 30% 70% 40% 60%;
+    border: 10px solid var(--line);
+    background-color: var(--sub);
+}
+
+.face-top .ear.right {
+    position: absolute;
+    top: 10px;
+    left: 220px;
+    /* left: -30px; */
+    width: 230px;
+    height: 230px;
+    border-radius: 30% 70% 40% 60%;
+    transform: rotate(90deg);
+    border: 10px solid var(--line);
+    background-color: var(--sub);
+}
+
+.airpods.left {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    border-radius: 30% 40% 40% 30%;
+    transform: rotate(140deg);
+    border: 10px solid var(--line);
+    background-color: white;
+}
+
+.airpods.left:before {
+    content: ' ';
+    position: absolute;
+    top: -50px;
+    left: 38px;
+    width: 50px;
+    height: 100px;
+    z-index: 1;
+    border-radius: 20%;
+    transform: rotate(-180deg);
+    border: 10px solid var(--line);
+    background-color: white;
+}
+
+.airpods.right {
+    position: absolute;
+    top:45px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    border-radius: 30% 40% 40% 30%;
+    transform: rotate(-140deg);
+    border: 10px solid var(--line);
+    background-color: white;
+}
+
+.airpods.right:before {
+    content: ' ';
+    position: absolute;
+    top: -50px;
+    right: 38px;
+    width: 50px;
+    height: 100px;
+    z-index: 1;
+    border-radius: 20%;
+    transform: rotate(-180deg);
+    border: 10px solid var(--line);
+    background-color: white;
+}
+
+.face-main .eyebrow {
+    position: absolute;
+    top: 120px;
+    width: 100px;
+    height: 40px;
+    border-radius: 80%;
+    background-color: var(--main);
+    border: 10px solid var(--line);
+}
+
+.face-main .eyebrow.left {
+    left: 70px;
+    background-color: #cbcbcb;
+    animation: eyebrows-l 0.5s infinite alternate;
+}
+
+.face-main .eyebrow.right {
+    right: 80px;
+    background-color: #cbcbcb;
+    animation: eyebrows-r 0.7s infinite alternate;
+}
+
+.face-main .eye {
+    position: absolute;
+    top: 180px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--line);
+}
+
+.face-main .eye.left {
+    left: 130px;
+}
+
+.face-main .eye.right {
+    right: 140px;
+}
+
+.face-main .nose {
+    position: absolute;
+    top: 195px;
+    left: 160px;
+    width: 60px;
+    height: 50px;
+    z-index: 2;
+    border-radius: 40% 40% 40% 50%;
+    background-color: var(--nose);
+}
+
+.face-main .mouth {
+    position: absolute;
+    top: 210px;
+    left: 95px;
+    width: 200px;
+    height: 120px;
+    border: 10px solid var(--line); 
+    border-radius: 50%;
+}
+
+.face-main .mouth-bg {
+    position: absolute;
+    top: 210px;
+    background-color: white;
+}
+
+.face-main .mouth-lip {
+    position: absolute;
+    top: 250px;
+    left: 175px;
+    width: 30px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8bbd2;
+    border: 10px solid var(--line); 
+    animation: mouth 0.5s infinite alternate;
+}
