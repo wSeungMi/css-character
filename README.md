@@ -4,7 +4,7 @@
 
 👉  [강아지 보러가기](https://wseungmi.github.io/css-character/)  
 
-<img src="readme-img/gif.gif" width="500px"> 
+<img src="readme-img/gif.gif" width="400px"> 
 
 <hr>
 
